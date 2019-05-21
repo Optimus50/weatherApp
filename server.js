@@ -4,12 +4,13 @@ const app = express();
 
 
 
-app.set('view engine', 'ejs');
+
+
+
 app.use(express.static('public'));
-
-
 // import the middleware into the application
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
 
 
 app.get('/', (req, res) => {
